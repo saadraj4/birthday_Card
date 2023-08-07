@@ -97,41 +97,41 @@
         <!-- <div class="row message">
         <div class="col-md-12"><p>Khushbu</p></div>
     </div> -->
-        <div class="row cake-cover">
-            <div class="col-md-12 texr-center">
-                <div class="cake">
-                    <div class="velas">
-                        <div class="fuego"></div>
-                        <div class="fuego"></div>
-                        <div class="fuego"></div>
-                        <div class="fuego"></div>
-                        <div class="fuego"></div>
-                    </div>
-                    <div class="cobertura"></div>
-                    <div class="bizcocho"></div>
+    <div class="row cake-cover">
+        <div class="col-md-12 texr-center">
+            <div class="cake">
+                <div class="velas">
+                    <div class="fuego"></div>
+                    <div class="fuego"></div>
+                    <div class="fuego"></div>
+                    <div class="fuego"></div>
+                    <div class="fuego"></div>
                 </div>
+                <div class="cobertura"></div>
+                <div class="bizcocho"></div>
             </div>
         </div>
-        <div class="row message">
-            <div class="col-md-12" id="texts-container">
+    </div>
+    <div class="row message">
+        <div class="col-md-12" id="texts-container">
+        </div>
+    </div>
+    <div class="navbar navbar-fixed-bottom center-btn">
+        <div class="row">
+            <div class="col-md-6 text-center col-md-offset-3">
+                <button class="btn btn-primary" id="turn_on">Turn On Lights</button>
+                <button class="btn btn-primary" id="play">Play Music</button>
+                <button class="btn btn-primary" id="bannar_coming">Let's Decorate</button>
+                <button class="btn btn-primary" id="balloons_flying">Fly With Balloons</button>
+                <button class="btn btn-primary" id="cake_fadein">Cake?</button>
+                <button class="btn btn-primary" id="light_candle"> Light Candle</button>
+                <button class="btn btn-primary" id="wish_message"  onclick="playAudio()">Happy Birthday</button>
+                <audio id="birthdayAudio" src="assets\birthday.mp3"></audio>
+                <button class="btn btn-primary" id="story">A mesage for you</button>
+                <!-- <button class="btn btn-primary" id="cake_cut">Lrt's Cut the Cake</button> -->
             </div>
         </div>
-        <div class="navbar navbar-fixed-bottom center-btn">
-            <div class="row">
-                <div class="col-md-6 text-center col-md-offset-3">
-                    <button class="btn btn-primary" id="turn_on">Turn On Lights</button>
-                    <button class="btn btn-primary" id="play">Play Music</button>
-                    <button class="btn btn-primary" id="bannar_coming">Let's Decorate</button>
-                    <button class="btn btn-primary" id="balloons_flying">Fly With Balloons</button>
-                    <button class="btn btn-primary" id="cake_fadein">Cake?</button>
-                    <button class="btn btn-primary" id="light_candle"> Light Candle</button>
-                    <button class="btn btn-primary" id="wish_message" onclick="playAudio()">Happy Birthday</button>
-                    <audio id="birthdayAudio" src="assets\birthday.mp3"></audio>
-                    <button class="btn btn-primary" id="story">A mesage for you</button>
-                    <!-- <button class="btn btn-primary" id="cake_cut">Lrt's Cut the Cake</button> -->
-                </div>
-            </div>
-        </div>
+    </div>
 
 
     </div>
@@ -142,40 +142,10 @@
 
 <script src="custom.js"></script>
 <script>
-    const audio = document.getElementById("birthdayAudio");
-    const previous = document.getElementsById("Music")
-
-    // Function to lower volume of audio1
-    function lowerVolume() {
-        previous.volume = 0.0; // You can adjust this value (0.2 = 20% of original volume)
-    }
-
-    // Function to restore volume to normal
-    function restoreVolume() {
-        previous.volume = 1.0; // Set it back to 100% of original volume
-    }
-
-    function playAudio(){
+    function playAudio() {
+        var audio = document.getElementById("birthdayAudio");
         audio.play();
-        lowerVolume();
-        
-        // When audio1 starts playing
-        audio.addEventListener('play', () => {
-        lowerVolume();
-        });
-        // When audio1 pauses or ends
-        audio.addEventListener('pause', () => {
-        restoreVolume();
-        });
-
-        audio.addEventListener('ended', () => {
-        restoreVolume();
-        });
     }
-
-    // previous.play()
-
-    
-</script>
+    </script>
 
 </html>
