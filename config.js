@@ -24,7 +24,7 @@ var config = {
     desc: {
         turn_on: "Click",
         play: "Some Music?",
-        bannar_coming: "Lights?",
+        bannar_coming: "Next?",
         balloons_flying: "It seems that something is missing",
         light_candle: "Candle?",
         wish_message: "Happy birthday",
