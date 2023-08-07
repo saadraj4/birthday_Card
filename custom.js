@@ -9,7 +9,7 @@ $(function () {
             img.src = config.imgs[item];
             img.setAttribute("class", 'text-img');
             p.appendChild(img);
-            setTimeout(7000)
+            setTimeout(10000)
         }
         dom.appendChild(p);
     });
